@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shaik Sulthan Basha — AI Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><b>~/sulthan</b><a href="#path">/journey</a><a href="#work">/work</a><a href="#stack">/stack</a><a href="#contact">/contact</a></div></header>
+
+<main>
+<div class="hero" id="hero"><div class="wrap">
+<div>
+<div class="status"><span class="dot"></span>open to backend and AI roles</div>
+<h1>Shaik Sulthan <span>Basha</span></h1>
+<p class="lead">I’m an <strong>AI engineer intern</strong> in Hyderabad. I build GenAI backends, RAG pipelines and the tools that make them usable. Electronics graduate, self-taught into software.</p>
+<div class="btns"><a class="btn main" href="#work">View projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</div>
+<div class="term" role="img" aria-label="Terminal showing a curl request returning Sulthan's profile as JSON">
+<div class="bar"><i></i><i></i><i></i><span>zsh — api.sulthan.dev</span></div>
+<pre id="t"></pre>
+</div>
+</div></div>
+
+<div class="wrap">
+<section id="path">
+<div class="sh"><h2>Journey</h2><code>GET /journey</code></div>
+<ol class="tl">
+<li><time>2026 — now</time><h3>AI Engineer Intern · Vagarious Solutions</h3><p>Building and debugging production AI backends in a large codebase: multi-agent workflows, speech pipelines, async job queues. Shipping fixes from day one without formal onboarding.</p></li>
+<li><time>2026</time><h3>SQL certification · Simplilearn</h3><p>Completed in August 2026. Put to use in QueryMind, a text-to-SQL tool.</p></li>
+<li><time>Earlier</time><h3>Business Development Associate · NxtSync</h3><p>EdTech internship. Learned how products reach users before writing the code behind them.</p></li>
+<li><time>Graduate</time><h3>B.Tech, Electronics &amp; Communication · Vel Tech University</h3><p>Chennai. Pivoted from hardware fundamentals into AI and GenAI engineering through self-directed learning.</p></li>
+</ol>
+</section>
+
+<section id="work">
+<div class="sh"><h2>Selected work</h2><code>GET /projects?limit=8</code></div>
+<div class="filters" role="group" aria-label="Filter projects">
+<button aria-pressed="true" data-f="all">all</button><button aria-pressed="false" data-f="ai">ai</button><button aria-pressed="false" data-f="web">web</button><button aria-pressed="false" data-f="mobile">mobile</button><button aria-pressed="false" data-f="tools">tools</button>
+</div>
+<div id="list">
+<details data-c="ai" open><summary><span class="m">GET</span><span class="path">/rag-document-qa</span><span class="code">200 OK</span><span class="chev"></span></summary><div class="body"><p>Upload documents and ask questions in plain language. Chunks are embedded into ChromaDB, retrieved per question, and answered by Llama 3.3 70B with the source text in context.</p><div class="tags"><i>FastAPI</i><i>ChromaDB</i><i>Groq</i><i>Streamlit</i></div><a class="go" href="https://rag-document-app-bot.streamlit.app" target="_blank" rel="noopener">Open live demo</a></div></details>
+<details data-c="ai"><summary><span class="m">POST</span><span class="path">/querymind</span><span class="code">200 OK</span><span class="chev"></span></summary><div class="body"><p>Turns a question into SQL. One LLM call plans the query from the schema, a second checks it. A SELECT-only guard blocks writes, and foreign keys come from INFORMATION_SCHEMA so joins are correct.</p><div class="tags"><i>Flask</i><i>Groq</i><i>SQL</i></div><a class="go" href="https://github.com/ShaikSulthan-dev/Querymind" target="_blank" rel="noopener">View on GitHub</a></div></details>
+<details data-c="ai web"><summary><span class="m">POST</span><span class="path">/resume-screener</span><span class="code">200 OK</span><span class="chev"></span></summary><div class="body"><p>Scores resumes against a job description and ranks candidates, so a recruiter reads the best matches first.</p><div class="tags"><i>FastAPI</i><i>React</i></div></div></details>
+<details data-c="ai web"><summary><span class="m">POST</span><span class="path">/pathai</span><span class="code">200 OK</span><span class="chev"></span></summary><div class="body"><p>Generates a personalized learning path from your goal and current level.</p><div class="tags"><i>LLM</i><i>Web app</i></div></div></details>
+<details data-c="web"><summary><span class="m">GET</span><span class="path">/offline-pos</span><span class="code">200 OK</span><span class="chev"></span></summary><div class="body"><p>Point-of-sale for an automobile spare parts shop. Works with no internet: Electron shell, Express API and SQLite on the same machine.</p><div class="tags"><i>Electron</i><i>Express</i><i>React</i><i>Tailwind</i><i>SQLite</i></div></div></details>
+<details data-c="mobile"><summary><span class="m">GET</span><span class="path">/lightdoc</span><span class="code">200 OK</span><span class="chev"></span></summary><div class="body"><p>Android document opener that stays small. Uses only the Storage Access Framework, so it needs no broad file permissions.</p><div class="tags"><i>Kotlin</i><i>Jetpack Compose</i><i>DataStore</i></div></div></details>
+<details data-c="web"><summary><span class="m">GET</span><span class="path">/linkhub</span><span class="code">200 OK</span><span class="chev"></span></summary><div class="body"><p>Linktree-style page that puts all your links in one place.</p><div class="tags"><i>Web app</i></div></div></details>
+<details data-c="tools"><summary><span class="m">POST</span><span class="path">/script-health-monitor</span><span class="code">200 OK</span><span class="chev"></span></summary><div class="body"><p>Watches scheduled scripts and sends a Telegram alert when one fails or goes silent.</p><div class="tags"><i>Python</i><i>Telegram API</i></div></div></details>
+</div>
+</section>
+
+<section id="stack">
+<div class="sh"><h2>Stack</h2><code>GET /stack</code></div>
+<div class="grid">
+<div class="box"><h3>backend</h3><ul><li>Python</li><li>FastAPI · Flask</li><li>Node · Express</li><li>Celery · Redis</li></ul></div>
+<div class="box"><h3>ai</h3><ul><li>LangGraph</li><li>RAG · ChromaDB</li><li>Whisper</li><li>Groq · OpenAI</li></ul></div>
+<div class="box"><h3>data</h3><ul><li>MongoDB</li><li>SQLite</li><li>SQL</li></ul></div>
+<div class="box"><h3>frontend</h3><ul><li>React · Vite</li><li>Tailwind</li><li>Streamlit</li></ul></div>
+<div class="box"><h3>infra</h3><ul><li>Docker</li><li>Nginx</li><li>AWS</li><li>Git</li></ul></div>
+</div>
+</section>
+
+<section id="contact" style="padding-top:0">
+<div class="cta">
+<h2>Let’s build something.</h2>
+<p>I’m looking for a backend or AI engineering role. The fastest way to reach me is LinkedIn.</p>
+<div class="btns"><a class="btn main" href="https://linkedin.com/in/shaiksulthanbasha2005" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/ShaikSulthan-dev" target="_blank" rel="noopener">GitHub</a></div>
+</div>
+</section>
+</div>
+</main>
+<footer>© 2026 Shaik Sulthan Basha · Hyderabad</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
